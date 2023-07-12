@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let quizContainer = document.getElementById('question');
     let optionsContainer = document.getElementById('options');
-    let submitButton = document.getElementById('sumbit');
+    let submitButton = document.getElementById('submit');
     let resultsContainer = document.getElementById('results');
     
     function displayQuestion() {
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
         quizContainer.textContent = question;
         optionsContainer.innerHTML = '';
-        resultsContainer.style.display = 'none'
     
         for( let i = 0; i < options.length; i++) {
             let option = document.createElement('button');
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentQuestion++;
     
         if(currentQuestion < quiz.length) {
-            displayQuestions();
+            displayQuestion();
         } else {
             displayResults();
         }
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         quizContainer.style.display = 'none';
         optionsContainer.style.display = 'none';
         submitButton.style.display = 'none';
-        resultsContainer.textContent = "Твій результат";
+        resultsContainer.innerText = "УРа";
     }
     
     displayQuestion();
