@@ -56,14 +56,10 @@ h1 {
 }
 
 #results {
-    display: flex;
-    align-items: center;
+    display: block;
     font-weight: bold;
     text-align: center;
-    text-decoration: dashed;
     background-color: blueviolet;
     color: white;
-    height: 300px;
     font-size: 30px;
-    width: 100vw;
 }
