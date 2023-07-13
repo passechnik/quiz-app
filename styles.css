@@ -20,7 +20,13 @@ body {
 }
 
 h1 {
+    display: block;
     text-align: center;
+    font-size: 3rem;
+    width: 400px;
+    align-self: center;
+    padding: 10px;
+    border-bottom: 5px solid #fa94c6;
 }
 
 .wrapper {
@@ -40,6 +46,7 @@ h1 {
     border: 4px solid black;
     border-radius: 2rem;
     box-shadow: 5px 5px 0px black;
+    height: fit-content;
 }
 
 .question-container {
@@ -54,7 +61,7 @@ h1 {
     height: auto;
     margin-bottom: 10px;
     color: black;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -105,9 +112,9 @@ h1 {
 
 #results {
     display: block;
+    align-self: center;
     font-weight: bold;
-    text-align: center;
-    background-color: blueviolet;
-    color: white;
-    font-size: 30px;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
 }

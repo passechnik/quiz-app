@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     let quiz = [
-        {
-            question: "Яким є перше прізвисько, яке Даша дала Лєрі?",
-            options: ["Пупік", "Гунган", "Сплюн"],
-            answer: 1
-        },
-        {
-            question: "Що Лєра хоче відкрити у майбутньому? (можливі дві правильні відповіді",
-            options: ["кав'ярню", "видавництво", "бордель", "храм поклоніння дар'ї еліс", "видавництво і храм поклоніння дар'ї еліс"],
-            answer: 4
-        }, 
-        {
-            question: "Лєра вважає, що її дівчина:",
-            options: ["неймовірна", "божественна", "еталон краси", "ідеал у всіх всесвітах", "усі відповіді є абсолютною правдою"],
-            answer: 4
-        },
-        {
-            question: "З якого моменту Лєра в дитинстві ридала як навіжена кожного разу?",
-            options: ["Зі спогадів Северуса Снейпа", "Коли дитинча мамонта не могло знайти маму", "Коли у П'ятачка луснула повітряна кулька"],
-            answer: 2
-        },
-        {
-            question: "Авторство прізвиська Солодка Кардманова Булочка належить:",
-            options: ["Лєрі", "Даші"],
-            answer: 0
-        },
+        // {
+        //     question: "Яким є перше прізвисько, яке Даша дала Лєрі?",
+        //     options: ["Пупік", "Гунган", "Сплюн"],
+        //     answer: 1
+        // },
+        // {
+        //     question: "Що Лєра хоче відкрити у майбутньому? (можливі дві правильні відповіді",
+        //     options: ["кав'ярню", "видавництво", "бордель", "храм поклоніння дар'ї еліс", "видавництво і храм поклоніння дар'ї еліс"],
+        //     answer: 4
+        // }, 
+        // {
+        //     question: "Лєра вважає, що її дівчина:",
+        //     options: ["неймовірна", "божественна", "еталон краси", "ідеал у всіх всесвітах", "усі відповіді є абсолютною правдою"],
+        //     answer: 4
+        // },
+        // {
+        //     question: "З якого моменту Лєра в дитинстві ридала як навіжена кожного разу?",
+        //     options: ["Зі спогадів Северуса Снейпа", "Коли дитинча мамонта не могло знайти маму", "Коли у П'ятачка луснула повітряна кулька"],
+        //     answer: 2
+        // },
+        // {
+        //     question: "Авторство прізвиська Солодка Кардманова Булочка належить:",
+        //     options: ["Лєрі", "Даші"],
+        //     answer: 0
+        // },
     
     ]
     
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayQuestion() {
         let question = quiz[currentQuestion].question;
         let options = quiz[currentQuestion].options;
-    
+
         quizContainer.textContent = question;
         optionsContainer.innerHTML = '';
     
@@ -65,9 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }else {
             displayResults();
         }
-
     }
-    
+
     function displayResults() {
         let score = 0;
 
@@ -76,10 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 score++;
             }
         }
+
         quizContainer.style.display = 'none';
         optionsContainer.style.display = 'none';
         submitButton.style.display = 'none';
-        resultsContainer.innerText = "Твій результат " + score + " from" + " " + quiz.length;
+        resultsContainer.innerText = "Вітаю! Твій результат " + score + " з" + " " + quiz.length + ".";
     }
     
     displayQuestion();
